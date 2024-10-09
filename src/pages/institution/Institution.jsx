@@ -26,7 +26,7 @@ const Institution = () => {
   return (
     <>
     <div>
-      <div className="flex my-3 justify-between items-center">
+      <div className="flex my-3 justify-between ">
         <p className="font-Exo font-semibold text-3xl font">Institution </p>
         <HeaderButton
            title= "institution"
