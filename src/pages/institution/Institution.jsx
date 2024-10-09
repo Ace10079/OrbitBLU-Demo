@@ -15,15 +15,23 @@ const Institution = () => {
   const [isModal, setIsModal] = useState(false);
   const [isModal1, setIsModal1] = useState(false);
 
+  const handleOpenModal =() =>{
+   setIsModal (true);
+  }
+
+  const handleCloseModal =()=>{
+    setIsModal1(false);
+  }
+
   return (
     <>
     <div>
-      <div className="flex my-3 justify-between">
+      <div className="flex my-3 justify-between items-center">
         <p className="font-Exo font-semibold text-3xl font">Institution </p>
         <HeaderButton
            title= "institution"
             hasCreatePermission={hasCreatePermission}
-            onClick={() => setIsModal(true)}
+            onClick={handleOpenModal}
           />
       </div>
       <table className="w-full  items-center rounded-lg overflow-auto ">
@@ -104,6 +112,7 @@ const Institution = () => {
             <td className="text-center">
               <p>Sathyabama </p>
             </td>
+
             <td className="text-center">
               <p>vishvanth202005@gmail.com</p>
             </td>
