@@ -10,6 +10,7 @@ import Interview from "./pages/interview/Interview";
 import ViewTickets from "./pages/tickets/ViewTickets";
 import Subscription from "./pages/subscription/Subscription";
 import Settings from "./pages/settings/Settings";
+import Leads from "./pages/leads/Leads";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/leads" element={<Leads/>}/>
             <Route path="/enquries" element={<Enquries/>}/>
             <Route path="/insitution" element={<Insitution/>}/>
             <Route path="/tickets" element={<Tickets/>}/> 
