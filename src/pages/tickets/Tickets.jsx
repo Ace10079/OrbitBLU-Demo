@@ -101,7 +101,7 @@ const Tickets = () => {
                 <p>18 June 24, 02.23 PM</p>
               </td>
               <td className=" text-center ">
-                <p className="bg-violet-100 text-violet-500  rounded-lg p-1 text-base font-semibold">
+                <p className="bg-red-100 text-red-500  rounded-lg p-1 text-base font-semibold">
                   active
                 </p>
               </td>

@@ -14,43 +14,42 @@ const Settings = () => {
   };
   return (
     <>
-    <div>
-      <div className="flex my-3 justify-between  items-center">
-        <p className="font-Exo font-semibold text-3xl font">Subscription</p>
-        <HeaderButton
-          title="Subscription"
-          hasCreatePermission={hasCreatePermission}
-          
-        />
-      </div>
-      <table className="w-full mt-4 items-center rounded-lg overflow-auto ">
+      <div>
+        <div className="flex my-3 justify-between  items-center">
+          <p className="font-Exo font-semibold text-3xl font">Settings</p>
+          <HeaderButton
+            title="Roles"
+            hasCreatePermission={hasCreatePermission}
+          />
+        </div>
+        <table className="w-full mt-4 items-center rounded-lg overflow-auto ">
           <thead className="items-center">
             <tr className=" text-end  ">
               <th className="bg-slate-200 p-4 font-semibold rounded-l-lg ">
                 <p className="flex gap-1 items-center">
                   {" "}
-                  S.No <HiArrowsUpDown className="text-gray-400"/>
+                  S.No <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
               <th className="bg-slate-200 font-semibold ">
                 <p className="flex gap-1 items-center">
                   {" "}
-                 Role Name <HiArrowsUpDown className="text-gray-400"/>{" "}
+                  Role Name <HiArrowsUpDown className="text-gray-400" />{" "}
                 </p>
               </th>
 
               <th className="bg-slate-200 font-semibold pl-6">
                 <p className="flex gap-1 items-center">
                   {" "}
-                   Status <HiArrowsUpDown className="text-gray-400"/>
+                  Status <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
               <th className=" bg-slate-200 font-semibold pl-8 ">
                 <p className="flex gap-1 items-center">
                   {" "}
-                  Created by <HiArrowsUpDown className="text-gray-400"/>
+                  Created by <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
@@ -65,7 +64,7 @@ const Settings = () => {
               <th className="font-semibold pl-5 bg-slate-200 px-2">
                 <p className="flex gap-1  items-center">
                   {" "}
-                  Updated time <HiArrowsUpDown className="text-gray-400"/>
+                  Updated time <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
@@ -90,17 +89,14 @@ const Settings = () => {
                 </p>
               </td>
               <td className="px-10">
-                <p>
-                  Vishvanath </p>
+                <p>Vishvanath </p>
               </td>
-
-             
 
               <td className="">
                 <p>18 June 24, 02.23 PM</p>
               </td>
               <td className="pl-4">
-              <p>18 June 24, 02.23 PM</p>
+                <p>18 June 24, 02.23 PM</p>
               </td>
 
               <td className=" flex  items-center justify-center pt-1.5">
@@ -130,9 +126,9 @@ const Settings = () => {
             </p>
           </div>
         </div>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Settings
+export default Settings;

@@ -113,7 +113,7 @@ const Interview = () => {
               <p>100</p>
             </td>
             <td className=" text-center bg-white">
-              <p className="bg-violet-100 text-violet-500  rounded-lg p-0.5 text-base font-semibold">
+              <p className="bg-red-100 text-red-500  rounded-lg p-0.5 text-base font-semibold">
                 active
               </p>
             </td>

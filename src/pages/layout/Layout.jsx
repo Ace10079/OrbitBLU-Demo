@@ -23,7 +23,7 @@ const Layout = () => {
   const Menus = [
     { title: "Dashboard", icon: <LuLayoutDashboard />, to: "/dashboard" },
     { title: "Institution", icon: <HiOutlineBuildingOffice2 />, to: "/insitution"},
-    { title: "Leads", icon: <GoPeople />, to: "leads" },
+    { title: "Leads", icon: <GoPeople />, to: "/leads" },
     { title: "Enquires", icon: <TbUserQuestion />, to: "/enquries" },
     { title: "Tickets", icon: <TbTicket />, to: "/tickets" },
     { title: "Packages", icon: <PiPackageDuotone />, to: "/packages" },
