@@ -3,8 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Insitution from "./pages/institution/Institution";
 import Layout from "./pages/layout/Layout";
-import AddInstitution from "./pages/institution/AddInstitution";
 import Enquries from "./pages/enquries/Enquries";
+import Tickets from "./pages/tickets/Tickets";
+import Packages from "./pages/packages/Packages"
+import Interview from "./pages/interview/Interview";
+import ViewTickets from "./pages/tickets/ViewTickets";
+import Subscription from "./pages/subscription/Subscription";
+import Settings from "./pages/settings/Settings";
 
 function App() {
   return (
@@ -15,7 +20,12 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/enquries" element={<Enquries/>}/>
             <Route path="/insitution" element={<Insitution/>}/>
-            <Route path="/addinsitution" element={<AddInstitution/>}/>  
+            <Route path="/tickets" element={<Tickets/>}/> 
+            <Route path="/viewtickets" element={<ViewTickets/>}/>  
+            <Route path="/packages" element={<Packages/>}/>
+            <Route  path="/interview" element={<Interview/>}/>
+            <Route  path="/subscription" element={<Subscription/>}/>
+            <Route path="/settings" element={<Settings/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import { useState, Suspense } from "react";
 import { Outlet, NavLink, useLocation } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
@@ -13,8 +13,7 @@ import { FiUserPlus } from "react-icons/fi";
 import { TbMessagePlus } from "react-icons/tb";
 import { RiVipDiamondLine } from "react-icons/ri";
 import { TbSettings } from "react-icons/tb";
-import Navbar from "./Navbar"
-
+import Navbar from "./Navbar";
 
 const Layout = () => {
   const location = useLocation();
@@ -23,22 +22,22 @@ const Layout = () => {
 
   const Menus = [
     { title: "Dashboard", icon: <LuLayoutDashboard />, to: "/dashboard" },
-    { title: "Institution", icon: <HiOutlineBuildingOffice2 />, to: "/insitution" },
+    { title: "Institution", icon: <HiOutlineBuildingOffice2 />, to: "/insitution"},
     { title: "Leads", icon: <GoPeople />, to: "#" },
     { title: "Enquires", icon: <TbUserQuestion />, to: "/enquries" },
-    { title: "Tickets", icon: <TbTicket />, to: "#" },
-    { title: "Packages", icon: <PiPackageDuotone />, to: "#" },
+    { title: "Tickets", icon: <TbTicket />, to: "/tickets" },
+    { title: "Packages", icon: <PiPackageDuotone />, to: "/packages" },
     { title: "Users", icon: <FiUserPlus />, to: "#" },
-    { title: "Interview", icon: <TbMessagePlus />, to: "#" },
-    { title: "Subscription", icon: <RiVipDiamondLine />, to: "#" },
-    { title: "Settings", icon: <TbSettings />, to: "#" },
+    { title: "Interview", icon: <TbMessagePlus />, to: "/interview" },
+    { title: "Subscription", icon: <RiVipDiamondLine />, to: "/subscription" },
+    { title: "Settings", icon: <TbSettings />, to: "/settings" },
   ];
 
   return (
     <div>
       <div className="w-full h-screen relative z-0  md:flex">
         <div
-          className={` md:relative md:grid md:grid-rows-12 absolute transition-all duration-100 ${
+          className={` md:relative md:grid md:grid-rows-12 absolute transition-all shadow-2xl duration-100 ${
             open ? "md:w-1/6 w-3/6 h-screen" : "md:w-1/12 "
           }`}
         >
@@ -50,18 +49,15 @@ const Layout = () => {
             fontSize="small"
           />
 
-          
-            <img
-              src={logo}
-              alt="Image"
-              className={`transition-all duration-500  ${
-                open
-                  ? "w-2/4 h-8 mt-10 ml-9 "
-                  : "md:w-20 md:h-10 md:mt-12 md:ml-4 md:mr-5 w-9 h-9 mr-10"
-              }`}
-            />
-        
-          
+          <img
+            src={logo}
+            alt="Image"
+            className={`transition-all duration-500  ${
+              open
+                ? "w-2/4 h-8 mt-10 ml-9 "
+                : "md:w-20 md:h-10 md:mt-12 md:ml-4 md:mr-5 w-9 h-9 mr-10"
+            }`}
+          />
 
           <div className="row-span-10 mt-9 ">
             <ul className="pt-3 ">
@@ -73,7 +69,7 @@ const Layout = () => {
                         location.pathname === menu.to
                           ? `${
                               open
-                                ? "bg-select-sidebar  text-blue-500 transition-all duration-500"
+                                ? "bg-select-sidebar  border-r-4 border-orange text-blue-500 transition-all duration-500"
                                 : "md:bg-gray-200 md:text-primary md:transition-all md:duration-500 duration-75"
                             }`
                           : "text-gray-500  "
@@ -110,7 +106,7 @@ const Layout = () => {
             open ? "md:w-5/6 sm:w-full" : "md:w-11/12 sm:w-full"
           }`}
         >
-         <Navbar/>
+          <Navbar />
           <Suspense>
             <Outlet />
           </Suspense>

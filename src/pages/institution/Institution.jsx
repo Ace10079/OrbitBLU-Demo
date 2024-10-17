@@ -3,15 +3,13 @@ import { HiArrowsUpDown } from "react-icons/hi2";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
-import { useNavigate} from "react-router-dom";
 import { useState } from "react";
 import HeaderButton from "../../components/HeaderButton";
 import AddInstitution from "./AddInstitution";
 import ViewInstitution from "./ViewInstitution";
 
-const Institution = () => {
+const Institution = (props) => {
   const hasCreatePermission = ("create");
-  const hasViewPermission = ("view");
   const [isModal, setIsModal] = useState(false);
   const [isModal1, setIsModal1] = useState(false);
 
@@ -26,7 +24,7 @@ const Institution = () => {
   return (
     <>
     <div>
-      <div className="flex my-3 justify-between ">
+      <div className="flex my-3 justify-between  items-center">
         <p className="font-Exo font-semibold text-3xl font">Institution </p>
         <HeaderButton
            title= "institution"
@@ -38,59 +36,59 @@ const Institution = () => {
         <thead className="items-center">
           <tr className=" text-end  ">
             <th className="bg-slate-200 p-4 font-semibold rounded-l-lg ">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
-                S.No <HiArrowsUpDown />
+                S.No <HiArrowsUpDown className="text-gray-400"/>
               </p>
             </th>
 
             <th className="bg-slate-200 font-semibold ">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
-                Institution ID <HiArrowsUpDown />{" "}
+                Institution ID <HiArrowsUpDown className="text-gray-400"/>{" "}
               </p>
             </th>
 
             <th className="bg-slate-200 font-semibold pl-2">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
-                Institution Name <HiArrowsUpDown />
+                Institution Name <HiArrowsUpDown className="text-gray-400"/>
               </p>
             </th>
 
             <th className=" bg-slate-200 font-semibold pl-14 ">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
-                Email ID <HiArrowsUpDown />
+                Email ID <HiArrowsUpDown className="text-gray-400"/>
               </p>
             </th>
 
             <th className="bg-slate-200 font-semibold ">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
                 SPOC Name
-                <HiArrowsUpDown />
+                <HiArrowsUpDown className="text-gray-400"/>
               </p>
             </th>
 
             <th className="font-semibold bg-slate-200">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
-                Credit <HiArrowsUpDown />
+                Credit <HiArrowsUpDown className="text-gray-400" />
               </p>
             </th>
 
             <th className=" items-center bg-slate-200 font-semibold pl-12">
-              <p className="flex gap-2">
+              <p className="flex gap-1">
                 {" "}
-                Date <HiArrowsUpDown />
+                Date <HiArrowsUpDown className="text-gray-400"/>
               </p>
             </th>
 
             <th className="items-center bg-slate-200 font-semibold px-2">
-              <p className="flex gap-2 items-center">
+              <p className="flex gap-1 items-center">
                 {" "}
-                Status <HiArrowsUpDown />
+                Status <HiArrowsUpDown className="text-gray-400" />
               </p>
             </th>
 
