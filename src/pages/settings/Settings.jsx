@@ -18,10 +18,11 @@ const Settings = () => {
         <div className="flex my-3 justify-between  items-center">
           <p className="font-Exo font-semibold text-3xl font">Settings</p>
           <HeaderButton
-            title="Roles"
+            title="Access"
             hasCreatePermission={hasCreatePermission}
           />
         </div>
+        <div className="overflow-x-auto no-scrollbar">
         <table className="w-full mt-4 items-center rounded-lg overflow-auto ">
           <thead className="items-center">
             <tr className=" text-end  ">
@@ -84,8 +85,8 @@ const Settings = () => {
                 </p>
               </td>
               <td className=" text-start px-2  ">
-                <p className="bg-red-100 text-red-500 text-center  rounded-lg p-1 text-base font-semibold">
-                  active
+                <p className="bg-red-200 text-red-700 text-center w-fit p-1.5 px-2 rounded-lg  text-base font-semibold">
+                  Inactive
                 </p>
               </td>
               <td className="px-10">
@@ -108,6 +109,7 @@ const Settings = () => {
             </tr>
           </tbody>
         </table>
+        </div>
         <div className=" m-4 flex justify-between text-sm font-Source_Sans_Pro text-gray-400">
           <p>showing result for 1 out of 1 </p>
           <div className="flex gap-2">

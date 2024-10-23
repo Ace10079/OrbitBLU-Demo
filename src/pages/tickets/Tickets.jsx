@@ -6,45 +6,45 @@ import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 
 const Tickets = () => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate ();
-
-  const handlenavigate =()=>{
+  const handlenavigate = () => {
     navigate("/viewtickets");
-  }
+  };
 
   return (
     <>
       <div>
         <p className="font-Exo font-semibold text-3xl font">Tickets </p>
+        <div className="overflow-x-auto no-scrollbar">
         <table className="w-full mt-4 items-center rounded-lg overflow-auto ">
           <thead className="items-center">
             <tr className=" text-end  ">
               <th className="bg-slate-200 p-4 font-semibold rounded-l-lg ">
                 <p className="flex gap-1 items-center">
                   {" "}
-                  S.No <HiArrowsUpDown  className="text-gray-400" />
+                  S.No <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
               <th className="bg-slate-200 font-semibold ">
                 <p className="flex gap-1 items-center">
                   {" "}
-                  Ticket ID <HiArrowsUpDown  className="text-gray-400" />{" "}
+                  Ticket ID <HiArrowsUpDown className="text-gray-400" />{" "}
                 </p>
               </th>
 
               <th className="bg-slate-200 font-semibold pl-2">
                 <p className="flex gap-1 items-center">
                   {" "}
-                   Name <HiArrowsUpDown className="text-gray-400"  />
+                  Name <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
               <th className=" bg-slate-200 font-semibold pl-14 ">
                 <p className="flex gap-1 items-center">
                   {" "}
-                  Complaint <HiArrowsUpDown  className="text-gray-400" />
+                  Complaint <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
@@ -52,14 +52,14 @@ const Tickets = () => {
                 <p className="flex gap-1 items-center">
                   {" "}
                   Priority
-                  <HiArrowsUpDown className="text-gray-400"  />
+                  <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
               <th className="font-semibold pl-5 bg-slate-200">
                 <p className="flex gap-1  items-center">
                   {" "}
-                  Date_Time <HiArrowsUpDown className="text-gray-400"  />
+                  Date_Time <HiArrowsUpDown className="text-gray-400" />
                 </p>
               </th>
 
@@ -86,8 +86,7 @@ const Tickets = () => {
                 </p>
               </td>
               <td className="">
-                <p>
-                  Vishvanath </p>
+                <p>Vishvanath </p>
               </td>
 
               <td className="text-start pl-4">
@@ -96,16 +95,16 @@ const Tickets = () => {
               <td className="text-start">
                 <p>Ravi</p>
               </td>
-              
+
               <td className="text-start">
                 <p>18 June 24, 02.23 PM</p>
               </td>
               <td className=" text-center ">
-                <p className="bg-red-100 text-red-500  rounded-lg p-1 text-base font-semibold">
-                  active
+                <p className="bg-red-200 text-red-700  rounded-lg p-1 text-base font-semibold">
+                  Inactive
                 </p>
               </td>
-              <td className=" pr-2 pl-12">
+              <td className=" flex justify-center mt-1.5">
                 <p className="bg-red-200 rounded-md text-red-700 w-fit items-center  p-1.5">
                   {" "}
                   <RiDeleteBin6Line className="text-lg" />
@@ -114,7 +113,7 @@ const Tickets = () => {
             </tr>
           </tbody>
         </table>
-
+        </div>
         <div className=" m-4 flex justify-between text-sm font-Source_Sans_Pro text-gray-400">
           <p>showing result for 1 out of 1 </p>
           <div className="flex gap-2">

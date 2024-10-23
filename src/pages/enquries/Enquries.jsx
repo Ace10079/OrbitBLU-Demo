@@ -21,6 +21,7 @@ const Enquries = () => {
     <>
       <div>
         <p className="font-Exo my-3 font-semibold text-3xl font">Enquries</p>
+        <div className=" overflow-x-auto  no-scrollbar">
         <table className="w-full  items-center overflow-auto ">
           <thead className=" items-center">
             <tr className=" text-end  ">
@@ -74,9 +75,7 @@ const Enquries = () => {
                 </p>
               </th>
 
-              <th className="font-semibold bg-slate-200">
-                <p className="items-center"></p>
-              </th>
+              
 
               <th className="font-semibold bg-slate-200 rounded-r-lg">
                 <p className="items-center"></p>
@@ -104,28 +103,29 @@ const Enquries = () => {
                 <p>Social Science</p>
               </td>
               <td className=" text-center ">
-                <p className="bg-red-100 text-red-500  rounded-lg p-0.5 text-base font-semibold">
-                  active
+                <p className="bg-red-200 text-red-700 p-1.5 rounded-lg  text-base font-semibold">
+                  Inactive
                 </p>
               </td>
-              <td className=" px-2">
-                <p
-                  className="bg-green-100 rounded-md text-green-700  pl-2.5 py-0.5 "
+              
+              <td className="flex justify-center gap-2 items-center mt-1.5">
+              <p
+                  className="bg-green-100 rounded-md text-green-700 p-1.5"
                   onClick={handleopenViewEnq}
                 >
                   <TbEye className="text-2xl " />
                 </p>
-              </td>
-              <td className="pr-2 ">
-                <p className="bg-red-200 rounded-md text-red-700 pl-1.5 py-1 ">
+                <p className="bg-red-200 rounded-md text-red-700  p-1.5 ">
                   {" "}
-                  <RiDeleteBin6Line className="text-lg" />
+                  <RiDeleteBin6Line className="text-xl" />
+                  
                 </p>
+               
               </td>
             </tr>
           </tbody>
         </table>
-
+        </div>
         <div className=" m-4 flex justify-between text-sm font-Source_Sans_Pro text-gray-400">
           <p>showing result for 1 out of 1 </p>
           <div className="flex gap-2">

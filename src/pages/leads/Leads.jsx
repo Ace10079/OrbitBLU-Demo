@@ -101,7 +101,7 @@ const Leads = () => {
             </td>
 
             <td className=" text-center ">
-              <p className="bg-red-100 text-red-500  rounded-lg p-1 text-base font-semibold">
+              <p className="bg-red-100 text-red-500  rounded-lg px-3 p-1.5 w-fit text-base font-semibold">
                 active
               </p>
             </td>
