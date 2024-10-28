@@ -1,29 +1,11 @@
-import React, { useState } from "react";
+import React from 'react'
 import { HiArrowLeft, HiArrowRight, HiArrowsUpDown } from "react-icons/hi2";
 import { RiDeleteBinLine } from "react-icons/ri";
-import AddLeads from "./AddLeads";
-import LeadsDetails from "./LeadsDetails";
-import { useNavigate } from "react-router-dom";
 
-const Leads = () => {
-  const [popup,setPopup]=useState(false) 
-  const handleOpenModal=()=>{
-    setPopup(true)
-  }
- const navigate = useNavigate();
-
-const handleDetails =()=>{
- navigate("/LeadDetails");
-}
+const UpcomingInterview = () => {
   return (
     <>
-      <div className="flex  my-4 justify-between">
-        <h1 className="font-Exo text-xl font-bold py-2 px-1 text-slate-950">Leads</h1>
-        <button onClick={handleOpenModal} className="bg-orange text-white rounded-md py-2 px-10  font-Source_Sans_Pro">
-          Add Leads
-        </button>
-      </div>
-      <table className=" font-Source_Sans_Pro w-full bg-slate-200 rounded-md">
+     <table className=" font-Source_Sans_Pro w-full bg-slate-200 rounded-md">
         <thead>
           <tr>
             <th className="py-4 px-2 font-semibold">
@@ -34,33 +16,36 @@ const handleDetails =()=>{
             </th>
             <th className="font-semibold">
               <p className="flex items-center justify-center gap-1">
-                Date & Time
+                Interview ID
                 <HiArrowsUpDown className="text-[#95A5A6]" />
               </p>
             </th>
             <th className="font-semibold ">
               <h1 className="flex items-center justify-center gap-1">
-                Name
+               Room No
                 <HiArrowsUpDown className="text-[#95A5A6]" />
               </h1>
             </th>
             <th className="font-semibold ">
               <p className="flex items-center justify-center gap-1">
-                Phone number
+               User Name
                 <HiArrowsUpDown className="text-[#95A5A6]" />
               </p>
             </th>
             <th className="font-semibold ">
               <h1 className="flex items-center justify-center gap-1">
-                Follow-up
+                Date
                 <HiArrowsUpDown className="text-[#95A5A6]" />
               </h1>
             </th>
             <th>
               <h1 className="flex items-center  gap-1">
-                Status
+                Slot time
                 <HiArrowsUpDown className="text-[#95A5A6]" />
               </h1>
+            </th>
+            <th>
+              <h1>Status</h1>
             </th>
             <th>
               <h1>Action</h1>
@@ -69,36 +54,46 @@ const handleDetails =()=>{
         </thead>
         <tbody  className=" text-grey bg-white cursor-default ">
           <tr className="border-b-2 text-center  ">
-            <td  className="px-8   ">
-              <p onClick={handleDetails} className="cursor-pointer">1</p></td>
-            <td >
-              <p onClick={handleDetails} className="cursor-pointer">18 June 24, 02.23 PM</p></td>
-            <td >
-              <p onClick={handleDetails} className="cursor-pointer">Name</p></td>
             <td>
-              <p  onClick={handleDetails} className="cursor-pointer">18 June 24, 02.23 PM</p></td>
+              <p>1</p></td>
             <td >
-              <p onClick={handleDetails}className="cursor-pointer" >18 June 24, 02.23 PM</p></td>
+              <p className="text-blue-800 underline ">123456</p></td>
             <td >
-              <p className="text-green-600 bg-[#CBFFD8] w-20 py-1 rounded-md text-center ">
+              <p>1234567</p></td>
+            <td>
+              <p>Name</p></td>
+            <td >
+              <p>18 June 24, 02.23 PM</p></td>
+              <td>
+              <p>100</p></td>
+            <td>
+              <p className="text-green-600 bg-[#CBFFD8] w-20 py-1  rounded-md  ">
                Active
               </p>
             </td>
-            <td className="  inline-block text-red-500 p-2 my-2 ml-4 bg-pink-200">
+            <td className="  inline-block text-red-500 p-2 my-4 ml-4 bg-pink-200 rounded-sm">
               <RiDeleteBinLine />
             </td>
           </tr>
           <tr className="border-b-2 text-center">
-            <td onClick={handleDetails} className="px-8  cursor-pointer">2</td>
-            <td onClick={handleDetails} className=" cursor-pointer">18 June 24, 02.23 PM</td>
-            <td onClick={handleDetails} className=" cursor-pointer">Name</td>
-            <td onClick={handleDetails} className=" cursor-pointer">18 June 24, 02.23 PM</td>
-            <td onClick={handleDetails} className=" cursor-pointer">18 June 24, 02.23 PM</td>
-            <td  >
-               <p className="  w-20 py-1 text-red-500 bg-[#F8D7DA] rounded-lg ">In Active</p> 
-             
+          <td>
+              <p>2</p></td>
+            <td className="text-blue-800 underline ">
+              <p>123456</p></td>
+            <td >
+              <p>1234567</p></td>
+            <td>
+              <p>Name</p></td>
+            <td >
+              <p>18 June 24, 02.23 PM</p></td>
+              <td>
+              <p>100</p></td>
+              <td>
+              <p className="text-red-500 bg-pink-200 w-20 py-1  rounded-md t">
+               InActive
+              </p>
             </td >
-            <td className="inline-block ml-4 p-2 my-2 bg-pink-200 text-red-500 rounded-sm">
+            <td className="inline-block ml-4 p-2 my-4 bg-pink-200 text-red-500">
               <RiDeleteBinLine  />
             </td>
           </tr>
@@ -122,10 +117,8 @@ const handleDetails =()=>{
           </p>
         </div>
       </div>
-      {popup &&<AddLeads onClose={()=>setPopup(false)}/>}
-    </>
-    
-  );
-};
+  </>
+  )
+}
 
-export default Leads;
+export default UpcomingInterview

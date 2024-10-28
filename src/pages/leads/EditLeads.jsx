@@ -1,27 +1,25 @@
-import React, { useState } from 'react'
+import React from "react";
 import { IoClose } from "react-icons/io5";
-import Leads from './Leads';
 
-const AddLeads = ({onClose}) => {
+const EditLeads = ({onClose}) => {
   return (
-    <>
-    <div className=" font-Source_Sans_Pro fixed inset-0 flex justify-center  items-center bg-opacity-25 backdrop-blur-sm">
-      <div className=" mx-2 shadow-lg bg-white rounded-lg">
+    <div className=" font-Source_Sans_Pro fixed inset-0 flex justify-center  items-center bg-opacity-25 backdrop-blur-sm ">
+      <div className=" mx-2  shadow-lg   bg-white rounded-lg">
         <div className="grid  ">
-          <button onClick={onClose} className=" place-self-end bg-white  rounded-full lg:-mx-4 lg:-my-5 md:-my-5 md:-mx-4 my-1 mx-1 lg:shadow-md md:shadow-md shadow-none lg:py-3 md:py-3 py-0 lg:px-3 md:px-3 px-0 ">
+          <button onClick={onClose} className=" place-self-end bg-white rounded-full lg:-mx-4 lg:-my-5 md:-my-5 md:-mx-4 my-1 mx-1 lg:shadow-md md:shadow-md shadow-none lg:py-3 md:py-3 py-0 lg:px-3 md:px-3 px-0">
             <IoClose className="size-[24px]" />
           </button>
           <h1 className="grid justify-center py-4 text-[#383E49] font-bold text-xl">
-              Add Leads </h1>
+              Edit Leads </h1>
           <form className="grid  mx-4 my-2 items-center gap-4 ">
               <label className=" text-[#48505E] text-base font-normal col-span-4 ">
                 Complaint Raised from
             </label>
-              <select defaultValue="from" className=" border border-[#D0D5DD] text-grey rounded-md w-[273px] h-11 px-2 col-span-8 ">
-              <option value='from'disabled>From</option>
+              <select defaultValue='from' className=" border border-[#D0D5DD] text-grey rounded-md w-[273px] h-11 px-2 col-span-8 ">
+                <option value='from'disabled>From</option>
                 <option value='call'>Call</option>
                 <option value='email'>Email</option>
-                <option value='sms'>From</option>
+                <option value='sms'>SMS</option>
               </select>
             
              <label className="col-span-4  text-[#48505E] text-base font-normal">
@@ -79,10 +77,9 @@ const AddLeads = ({onClose}) => {
             </div> 
           </form>
         </div>
+      </div>
     </div>
-    </div>
-    </>
-  )
-}
+  );
+};
 
-export default AddLeads
+export default EditLeads;

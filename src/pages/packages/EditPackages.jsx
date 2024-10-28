@@ -3,7 +3,7 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import AddPackages from "./AddPackages";
 
-const EditPackages = () => {
+const EditPackages = ({close}) => {
  
   return (
     <>
@@ -12,11 +12,14 @@ const EditPackages = () => {
           {}
           <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex  justify-center items-center  ">
             <div className="bg-white w-[522px] h-fit relative font-Source_Sans_Pro rounded-md m-2">
-              <p className="absolute right-2 top-2">
-                <IoMdClose
-                  className="text-xl bg-white "
-                />
+            <div className="flex justify-end">
+              <p
+                className="text-gray-500 p-3 rounded-full shadow-lg -m-3 bg-white w-fit items-center"
+                onClick={close}
+              >
+                ✖
               </p>
+            </div>
               <div className="border-b-2 border-gray-300 mx-10">
                 <h1 className="text-xl font-medium text-center pt-10 font-Exo my-2 pb-2">
                   Edit Package

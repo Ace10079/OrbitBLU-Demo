@@ -1,8 +1,13 @@
 import React from "react";
+import {useNavigate} from "react-router-dom"
 import { IoCameraOutline } from "react-icons/io5";
 import { LuSendHorizonal } from "react-icons/lu";
 
 const ViewTickets = () => {
+  const navigate = useNavigate();
+  const change=()=>{
+    navigate("/tickets");
+  }
   return (
     <div className="overflow-auto">
       <div className="flex justify-between items-center my-5 ">
@@ -94,7 +99,7 @@ const ViewTickets = () => {
         </div>
       </div>
       <div className="flex justify-center mb-4">
-        <button className="px-4 py-1.5 rounded-md text-white mt-8  bg-orange">Submit</button>
+        <button className="px-4 py-1.5 rounded-md text-white mt-8  bg-orange" onClick={change}>Submit</button>
       </div>
     </div>
   );

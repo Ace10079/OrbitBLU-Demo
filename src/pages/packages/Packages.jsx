@@ -17,6 +17,14 @@ const Packages = () => {
     setIsModal1(true);
   };
 
+  const handleCloseEdit =()=>{
+    setIsModal1(false);
+  }
+
+  const handleCloseModal=()=>{
+    setIsModal(false);
+  }
+
   return (
     <>
       <div className="overflow-auto no-scrollbar">
@@ -234,8 +242,8 @@ const Packages = () => {
           </div>
         </div>
       </div>
-      {isModal && <AddPackages />}
-      {isModal1 && <EditPackages />}
+      {isModal && <AddPackages close={handleCloseModal}/>}
+      {isModal1 && <EditPackages close={handleCloseEdit}/>}
     </>
   );
 };
