@@ -49,7 +49,7 @@ const Institution = () => {
                   </p>
                 </th>
 
-                <th className="bg-slate-200 font-semibold ">
+                <th className="bg-slate-200  font-semibold ">
                   <p className="flex gap-1 items-center">
                     {" "}
                     Institution ID <HiArrowsUpDown className="text-gray-400" />{" "}
@@ -71,7 +71,7 @@ const Institution = () => {
                   </p>
                 </th>
 
-                <th className="bg-slate-200 font-semibold px-3">
+                <th className="bg-slate-200  font-semibold px-5">
                   <p className="flex gap-1 items-center">
                     {" "}
                     SPOC Name
@@ -79,7 +79,7 @@ const Institution = () => {
                   </p>
                 </th>
 
-                <th className="font-semibold bg-slate-200 px-3">
+                <th className="font-semibold bg-slate-200 px-1">
                   <p className="flex gap-1 items-center">
                     {" "}
                     Credit <HiArrowsUpDown className="text-gray-400" />
@@ -110,25 +110,25 @@ const Institution = () => {
                 <td className="py-3 pl-4 ">
                   <p>123</p>
                 </td>
-                <td className="px-2 text-blue-500">
+                <td className="px-10 text-blue-500">
                   <p className="cursor-pointer" onClick={openviewIns}>
                     <u>12345</u>
                   </p>
                 </td>
-                <td className="px-3">
+                <td className="px-10">
                   <p>Sathyabama</p>
                 </td>
 
                 <td className=" ">
                   <p>vishvanth202005@gmail.com</p>
                 </td>
-                <td className="text-center ">
+                <td className="text-center px-16 ">
                   <p>Ravi</p>
                 </td>
                 <td className=" px-7 text-credits">
                   <p>100</p>
                 </td>
-                <td className=" ">
+                <td className="px- ">
                   <p>18 June 24, 02.23 PM</p>
                 </td>
                 <td className=" text-center ">
@@ -143,43 +143,7 @@ const Institution = () => {
                   </p>
                 </td>
               </tr>
-              <tr className="text-sm text-start bg-white text-gray-400 border-b-2">
-                <td className="py-3 pl-4 ">
-                  <p>123</p>
-                </td>
-                <td className="px-2 text-blue-500">
-                  <p>
-                    <u>12345</u>
-                  </p>
-                </td>
-                <td className="px-3   ">
-                  <p>Sathyabama </p>
-                </td>
-
-                <td className=" ">
-                  <p>vishvanth202005@gmail.com</p>
-                </td>
-                <td className="text-center ">
-                  <p>Ravi</p>
-                </td>
-                <td className=" px-7 text-credits">
-                  <p>100</p>
-                </td>
-                <td className=" ">
-                  <p>18 June 24, 02.23 PM</p>
-                </td>
-                <td className=" text-center ">
-                  <p className="bg-green-100 text-green-700  rounded-lg p-1 text-base font-semibold">
-                    Active
-                  </p>
-                </td>
-                <td className="flex justify-center">
-                  <p className="bg-red-100 rounded-md text-red-700 mt-1.5 p-1.5">
-                    {" "}
-                    <RiDeleteBin6Line className="text-lg" />
-                  </p>
-                </td>
-              </tr>
+             
             </tbody>
           </table>
         </div>

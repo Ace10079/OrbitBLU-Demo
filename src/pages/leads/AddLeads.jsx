@@ -6,12 +6,18 @@ const AddLeads = ({onClose}) => {
   return (
     <>
     <div className=" font-Source_Sans_Pro fixed inset-0 flex justify-center  items-center bg-opacity-25 backdrop-blur-sm">
-      <div className=" mx-2 shadow-lg bg-white rounded-lg">
-        <div className="grid  ">
-          <button onClick={onClose} className=" place-self-end bg-white  rounded-full lg:-mx-4 lg:-my-5 md:-my-5 md:-mx-4 my-1 mx-1 lg:shadow-md md:shadow-md shadow-none lg:py-3 md:py-3 py-0 lg:px-3 md:px-3 px-0 ">
-            <IoClose className="size-[24px]" />
-          </button>
-          <h1 className="grid justify-center py-4 text-[#383E49] font-bold text-xl">
+      <div className=" shadow-lg bg-white rounded-lg">
+        
+        <div className="flex justify-end">
+              <p
+                className="text-gray-500 p-3 -m-3 rounded-full shadow-lg  bg-white w-fit items-center"
+                onClick={onClose}
+              >
+                ✖
+              </p>
+            </div>
+            <div className="grid  px-4">
+          <h1 className="grid justify-center py-4 mb-4 text-[#383E49]  border-b-2 mx-4 font-bold text-xl">
               Add Leads </h1>
           <form className="grid  mx-4 my-2 items-center gap-4 ">
               <label className=" text-[#48505E] text-base font-normal col-span-4 ">
