@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Leads from "../../assets/leadsScreen.png";
+
 import FollowUp from "./AddFollowUp";
 import EditLeads from "./EditLeads";
 import AddFollowUp from "./AddFollowUp";
