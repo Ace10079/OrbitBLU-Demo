@@ -44,7 +44,7 @@ const LeadsDetails = () => {
               </p>
             </div>
             <div className="grid -mt-44 mx-6">
-            <img src={Leads} alt="Image" className="my-7 w-[128px]" /> 
+            <img src='./LeadsScreen.png' alt="Image" className="my-7 w-[128px]" /> 
              <button onClick={handleEdit} className=" text-white font-normal text-xs bg-orange rounded-md  py-3">
               Edit Leads
             </button>
